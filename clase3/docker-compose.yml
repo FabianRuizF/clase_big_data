@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+
+  worker-aux-nombre-apellido:
+    image: mjhea0/spark:3.0.2
+    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://139.144.62.82:7077
+    hostname: worker-aux
+    environment:
+      SPARK_CONF_DIR: /conf
+      SPARK_WORKER_CORES: 2
+      SPARK_WORKER_MEMORY: 2g
+      SPARK_PUBLIC_DNS: 139.144.62.82
+    ports:
+      - 8084:8081
+    networks: 
+      - spark_stack_spark-net
+
+
+
+networks:
+  spark_stack_spark-net:
+    external:
+      name: spark_stack_spark-net
