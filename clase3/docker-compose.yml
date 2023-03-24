@@ -14,6 +14,10 @@ services:
       - 8084:8081
     networks: 
       - spark_stack_spark-net
+    deploy:
+      placement:
+        constraints:
+          - node.hostname==nombre-apellido
 
 
 
