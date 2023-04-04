@@ -1,5 +1,5 @@
-$nombre="fabian"
-$apellido="ruiz"
+nombre="fabian"
+apellido="ruiz"
 ### Actualizar paquetes de instalacion
 sudo apt-get update
 
@@ -20,10 +20,10 @@ docker swarm join --token SWMTKN-1-01gwxz2v1ob8wdnq2zfasryodtaf54i9g291bbob41nwm
 
 ### Descargar archivo de docker-compose y configurar con el nombre y apellido adecuado
 wget https://raw.githubusercontent.com/FabianRuizF/clase_big_data/main/clase3/docker-compose.yml
-sed -i 's/localhost/$nombre-$apellido/g' /etc/hostname
-sed -i 's/localhost/$nombre-$apellido/g' /etc/hosts
-sed -i 's/nombre/$nombre/g' docker-compose.yml
-sed -i 's/apellido/$apellido/g' docker-compose.yml
+sed -i "s/localhost/$nombre-$apellido/g" /etc/hostname
+sed -i "s/localhost/$nombre-$apellido/g" /etc/hosts
+sed -i "s/nombre/$nombre/g" docker-compose.yml
+sed -i "s/apellido/$apellido/g" docker-compose.yml
 
 
 ### Reiniciar para que los nombres tomen efecto
