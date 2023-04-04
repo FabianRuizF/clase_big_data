@@ -7,7 +7,7 @@ services:
     environment:
       MASTER: spark://170.187.143.185:7077
       SPARK_CONF_DIR: /conf
-      SPARK_PUBLIC_DNS: 66.228.60.212
+      SPARK_PUBLIC_DNS: 170.187.143.185
     ports:
       - 4040:4040
       - 6066:6066
