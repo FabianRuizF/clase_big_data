@@ -5,7 +5,7 @@ services:
     command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master -h 0.0.0.0
     hostname: master
     environment:
-      MASTER: spark://66.228.60.212:7077
+      MASTER: spark://170.187.143.185:7077
       SPARK_CONF_DIR: /conf
       SPARK_PUBLIC_DNS: 66.228.60.212
     ports:
@@ -22,7 +22,7 @@ services:
 
   worker-aux-fabian-ruiz:
     image: fabiancrruiz/cluster-apache-spark:0.8
-    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://66.228.60.212:7077
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://170.187.143.185:7077
     hostname: worker-aux
     environment:
       SPARK_CONF_DIR: /conf
