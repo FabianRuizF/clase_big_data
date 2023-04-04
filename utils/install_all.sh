@@ -5,11 +5,10 @@ sudo apt-get update
 wget https://raw.githubusercontent.com/FabianRuizF/clase_big_data/main/utils/install_docker.sh
 sudo bash install_docker.sh
 
-### Instalar pip3 para poder ser usado
-sudo apt-get install python3-pip -y
 
-### Instalar version de pyspark especifica
-pip3 install pyspark==3.0.2
+### Instalar version de python3 correcta
+wget https://raw.githubusercontent.com/FabianRuizF/clase_big_data/main/utils/install_python.sh
+bash install_python.sh
 
 ### Instalar Java-jdk
 apt-get install openjdk-8-jdk-headless -qq
@@ -24,9 +23,7 @@ sed -i 's/localhost/fabian-ruiz/g' /etc/hosts
 sed -i 's/nombre/fabian/g' docker-compose.yml
 sed -i 's/apellido/ruiz/g' docker-compose.yml
 
-### Instalar version de python3 correcta
-wget https://raw.githubusercontent.com/FabianRuizF/clase_big_data/main/utils/install_python.sh
-bash install_python.sh
+
 ### Reiniciar para que los nombres tomen efecto
 sudo reboot
 
