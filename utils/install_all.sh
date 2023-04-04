@@ -11,6 +11,9 @@ sudo apt-get install python3-pip -y
 ### Instalar version de pyspark especifica
 pip3 install pyspark==3.0.2
 
+### Instalar Java-jdk
+apt-get install openjdk-8-jdk-headless -qq
+
 ### Unirse al docker-swarm
 docker swarm join --token SWMTKN-1-01gwxz2v1ob8wdnq2zfasryodtaf54i9g291bbob41nwmu3h6v-2v3e59m691nmg43rlsi29q8bq 139.144.62.82:2377
 
