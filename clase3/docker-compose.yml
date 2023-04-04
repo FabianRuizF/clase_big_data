@@ -2,8 +2,8 @@ version: "3.3"
 services:
 
   worker-aux-nombre-apellido:
-    image: fabiancrruiz/cluster-apache-spark:0.2
-    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://139.144.62.82:7077
+    image: fabiancrruiz/cluster-apache-spark:0.8
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://139.144.62.82:7077
     hostname: worker-aux
     environment:
       SPARK_CONF_DIR: /conf
