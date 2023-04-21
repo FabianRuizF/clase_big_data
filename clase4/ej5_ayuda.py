@@ -22,7 +22,7 @@ data.printSchema()
 
 data = spark.read.parquet("/mnt/nfs_share/data/central_west.parquet")
 new_column_name_list=  ##normalizacion de los datos aqui
-new_column_name_list=  ##procesamiento de las columnas aqui
+new_column_name_list=  ##procesamiento de las columnas aqui usando new_column_name_list de referencia
 data = data.toDF(*new_column_name_list) 
 
 
