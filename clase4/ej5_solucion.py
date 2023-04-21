@@ -23,8 +23,9 @@ data = spark.read.parquet("/mnt/nfs_share/data/central_west.parquet")
 data.printSchema()
 
 new_column_name_list=  [ud.normalize('NFKD',col).encode('ascii', errors='ignore').decode('utf-8') for col in data.columns]
-new_column_name_list=  [col.replace("."," ") for col in data.columns]
+new_column_name_list=  [col.replace("."," ") for col in new_column_name_list]
 data = data.toDF(*new_column_name_list) 
+
 
 
 data.printSchema()
