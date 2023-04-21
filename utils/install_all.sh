@@ -24,6 +24,7 @@ sed -i "s/localhost/$nombre-$apellido/g" /etc/hostname
 sed -i "s/localhost/$nombre-$apellido/g" /etc/hosts
 sed -i "s/nombre/$nombre/g" docker-compose.yml
 sed -i "s/apellido/$apellido/g" docker-compose.yml
+apt install nfs-common net-tools -y && mkdir -p /mnt/nfs_share && mount 139.144.62.82:/mnt/nfs_share /mnt/nfs_share
 
 
 ### Reiniciar para que los nombres tomen efecto
